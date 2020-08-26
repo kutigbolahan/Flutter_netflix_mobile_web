@@ -41,7 +41,25 @@ class _HomeScreenState extends State<HomeScreen> {
         controller: _scrollController,
         slivers: [
           SliverToBoxAdapter(
-              child: ContentHeader(featuredContent: sintelContent))
+              child: ContentHeader(featuredContent: sintelContent)),
+          SliverPadding(
+              sliver: SliverToBoxAdapter(
+                child: Previews(title: 'Previews', contentList: previews),
+              ),
+              padding: EdgeInsets.only(top: 20.0)),
+          SliverToBoxAdapter(
+            child: ContentList(title: 'My List', contentList: myList),
+          ),
+          SliverToBoxAdapter(
+            child: ContentList(
+              title: 'Netflix Originals',
+              contentList: originals,
+              isOriginals: true,
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: ContentList(title: 'Trending', contentList: trending),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
