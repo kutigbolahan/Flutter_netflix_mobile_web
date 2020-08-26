@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_mobile_web/data/data.dart';
 import 'package:netflix_mobile_web/widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -30,6 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: PreferredSize(
           child: CustomAppBar(
             scrollOfsset: _scrollOffset,
@@ -39,11 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
         controller: _scrollController,
         slivers: [
           SliverToBoxAdapter(
-            child: Container(
-              height: 1000.0,
-              color: Colors.blue,
-            ),
-          )
+              child: ContentHeader(featuredContent: sintelContent))
         ],
       ),
       floatingActionButton: FloatingActionButton(
