@@ -1,6 +1,9 @@
 # netflix_mobile_web
 
 A new Flutter project.
+![202008271157081](https://user-images.githubusercontent.com/43111810/91437786-547ae280-e862-11ea-81ce-2a2d81dde867.gif)
+
+![Screenshot (61)](https://user-images.githubusercontent.com/43111810/91441660-842ce900-e868-11ea-99fe-f74c9e9bb297.png)
 
 ## Getting Started
 
